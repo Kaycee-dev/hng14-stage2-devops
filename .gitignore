@@ -42,3 +42,9 @@ Thumbs.db
 # Docker / CI local artifacts
 trivy-results/
 coverage-reports/
+
+# Local-only planning, agent state, and task spec
+.claude/
+task_details.md
+docs/
+devops-stage2-*.md
