@@ -209,6 +209,7 @@ jobs:
           severity: CRITICAL
           exit-code: "1"
           ignore-unfixed: true
+          limit-severities-for-sarif: "true"
 
       - name: Trivy scan - worker
         if: always()
@@ -220,6 +221,7 @@ jobs:
           severity: CRITICAL
           exit-code: "1"
           ignore-unfixed: true
+          limit-severities-for-sarif: "true"
 
       - name: Trivy scan - frontend
         if: always()
@@ -231,6 +233,7 @@ jobs:
           severity: CRITICAL
           exit-code: "1"
           ignore-unfixed: true
+          limit-severities-for-sarif: "true"
 
       - name: Upload SARIF artifact
         if: always()
