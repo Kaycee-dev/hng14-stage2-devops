@@ -201,7 +201,7 @@ jobs:
           docker image ls
 
       - name: Trivy scan - api
-        uses: aquasecurity/trivy-action@v0.28.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: ${{ env.REGISTRY_HOST }}:${{ env.REGISTRY_PORT }}/${{ env.IMAGE_NAMESPACE }}/api:${{ env.IMAGE_TAG }}
           format: sarif
@@ -212,7 +212,7 @@ jobs:
 
       - name: Trivy scan - worker
         if: always()
-        uses: aquasecurity/trivy-action@v0.28.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: ${{ env.REGISTRY_HOST }}:${{ env.REGISTRY_PORT }}/${{ env.IMAGE_NAMESPACE }}/worker:${{ env.IMAGE_TAG }}
           format: sarif
@@ -223,7 +223,7 @@ jobs:
 
       - name: Trivy scan - frontend
         if: always()
-        uses: aquasecurity/trivy-action@v0.28.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: ${{ env.REGISTRY_HOST }}:${{ env.REGISTRY_PORT }}/${{ env.IMAGE_NAMESPACE }}/frontend:${{ env.IMAGE_TAG }}
           format: sarif
