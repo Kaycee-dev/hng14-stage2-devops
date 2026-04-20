@@ -1,12 +1,22 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "description": "hng14 stage2 devops frontend",
   "main": "app.js",
+  "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "lint": "eslint .",
+    "healthcheck": "node healthcheck.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "axios": "^1.4.0"
+    "express": "4.19.2",
+    "axios": "1.6.8"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0"
+  },
+  "engines": {
+    "node": ">=20 <21"
   }
 }
